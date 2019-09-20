@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Show</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.css">
+	<link rel="stylesheet" href="dist/fa/css/all.css">
+	<style>
+		i{
+			margin-top: 150px;
+			cursor: pointer;
+			background-color: black;
+			padding: 5px 12px;
+			border-radius: 50%;
+			color:white;
+		}
+
+	</style>
+
+	<script>
+		var img = ["image/image/Screenshot (106).png","image/image/Screenshot (107).png","image/image/Screenshot (108).png","image/image/Screenshot (109).png","image/image/Screenshot (110).png","image/image/Screenshot (112).png","image/image/Screenshot (113).png","image/image/Screenshot (114).png","image/image/Screenshot (115).png","image/image/Screenshot (77).png","image/image/Screenshot_2019-07-03-08-09-18-01_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot_2019-07-03-08-09-23-23_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot_2019-07-03-08-09-27-92_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot_2019-07-03-08-09-58-07_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot_2019-07-03-08-09-53-75_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot (107).png","image/image/Screenshot_2019-07-03-08-10-04-62_42d2d51ecb8779982861f73bd12e4cc1.png","image/image/Screenshot_2019-07-03-08-10-01-63_42d2d51ecb8779982861f73bd12e4cc1.png"];
+		var count = 0;
+
+		function nextclick(){
+			count ++;
+			document.getElementById("pic").src = img[count];
+		}
+
+		function previousclick(){
+			count --;
+			document.getElementById("pic").src= img[count];
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<h2 class="text-center" style="margin-bottom: 30px;">
+				Work Screenshot
+			</h2>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-1 text-right">
+				<i class="fas fa-angle-left fa-2x" onclick="previousclick()"></i>
+			</div>
+			<div class="col-lg-10" style="border:5px solid white;padding:10px;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);border-radius: 5px;">
+				<img src="image/image/Screenshot (106).png" id="pic" class="img-fluid" height="450" style="text-align: center;">
+			</div>
+			<div class="col-lg-1">
+				<i class="fas fa-angle-right fa-2x" onclick="nextclick()"></i>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
